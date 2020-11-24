@@ -1,0 +1,36 @@
+.calculator {
+    width: 150px;
+    left: 40px ;
+    text-align: center;
+    color: #999;
+}
+
+.resulta {
+    font-size: 1.0em;
+    font-weight: bold;
+    color: grey;
+    top: 40px;
+
+
+}
+
+.operator1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+
+}
+
+.operator2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: blue;
+
+}
+
+.calcular-button {
+    cursor: pointer;
+    color: blue;
+}
+
+
