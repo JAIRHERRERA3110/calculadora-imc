@@ -1,1 +1,419 @@
-<p>ui works!</p>
+calcula tu imcxd
+<div class="calculator">
+
+    <form>
+        <div class="input-group">
+            <span class="input-group"></span> 
+            <label for="peso">ingresa tu estatura</label>
+            <input id="peso"[(ngModel)]= "peso" type="number" class="form-control peso" name="peso" placeholder="0.0" style="width : 80px ;left: 40px ">
+        </div>
+
+        <div class="input-group">
+            <span class="input-group"> </span>
+            <label for="altura"> ingresa tu peso</label>
+            <input id="altura"[(ngModel)]= "altura" type="number" class="form-control altura" name="altura" placeholder="0.0" style="width : 80px; left: 40px ">
+        </div>
+  
+        <label for="edad ">ingrese su edad</label>
+        <input type="edad" id="edad" style="left: 90px" name="edad"  placeholder="123" required > 
+        <div>
+            <label for="sexo">elige un sexo</label>
+            <select name ="sexo" style="left: 40px "  >
+                <option [value]="true">Masculino</option>
+                <option [value]="false">Femenino</option>
+               
+            </select>
+        </div>
+
+        <button type="submit" class="calcular-button" (click)="imc()">calcular IMC</button>
+    </form>
+
+    
+
+        
+        
+        <span class="resulta" >{{ result }} </span>
+        <div *ngIf="result < 16 && result >0 "> 
+            <p> 
+            </p>
+            <table style="width: 300%">
+                <tr>
+                    <th>estado del cuerpo</th>
+                    <th>puntos de imc segun la oms</th>
+                </tr>
+                <tr>
+                    <td>delgadez severa</td>
+                    <td>menos de 16</td> 
+                    
+                </tr>
+                <tr>
+                    <td>delgadez moderada</td>
+                    <td>16.0-24.99</td>
+                </tr>
+                <tr>
+                    <td>delgadez leve</td>
+                    <td>17.0-18.49</td> 
+                    
+                </tr>
+                <tr>
+                    <td>normal</td>
+                    <td>18.5-24.99</td>
+                </tr>
+                <tr>
+                    <td>sobrepeso</td>
+                    <td>25.0-34-99</td> 
+                    
+                </tr>
+                <tr>
+                    <td>obesidad leve</td>
+                    <td>30.0-34.99</td>
+                </tr>
+                <tr>
+                    <td>obesidad media</td>
+                    <td>35.0-39-99</td> 
+                    
+                </tr>
+                <tr>
+                    <td>obesidad-morbida</td>
+                    <td>mas de 40</td>
+                </tr>
+               
+             
+                
+            </table>
+        </div>
+        <div *ngIf="result < 16.99 && result >16.0"> <p>usted se encuentra en una delgadez extrema tome medidas para eso</p>
+            <table style="width: 300%">
+                <tr>
+                    <th>estado del cuerpo</th>
+                    <th>puntos de imc segun la oms</th>
+                </tr>
+                <tr>
+                    <td>delgadez severa</td>
+                    <td>menos de 16</td> 
+                    
+                </tr>
+                <tr>
+                    <td>delgadez moderada</td>
+                    <td>16.0-24.99</td>
+                </tr>
+                <tr>
+                    <td>delgadez leve</td>
+                    <td>17.0-18.49</td> 
+                    
+                </tr>
+                <tr>
+                    <td>normal</td>
+                    <td>18.5-24.99</td>
+                </tr>
+                <tr>
+                    <td>sobrepeso</td>
+                    <td>25.0-34-99</td> 
+                    
+                </tr>
+                <tr>
+                    <td>obesidad leve</td>
+                    <td>30.0-34.99</td>
+                </tr>
+                <tr>
+                    <td>obesidad media</td>
+                    <td>35.0-39-99</td> 
+                    
+                </tr>
+                <tr>
+                    <td>obesidad-morbida</td>
+                    <td>mas de 40</td>
+                </tr>
+               
+             
+                
+            </table>
+        </div>
+        <div *ngIf="result < 18.49 && result >17.0"> delgadez leve no ai pez
+            <table style="width: 300%">
+                <tr>
+                    <th>estado del cuerpo</th>
+                    <th>puntos de imc segun la oms</th>
+                </tr>
+                <tr>
+                    <td>delgadez severa</td>
+                    <td>menos de 16</td> 
+                    
+                </tr>
+                <tr>
+                    <td>delgadez moderada</td>
+                    <td>16.0-24.99</td>
+                </tr>
+                <tr>
+                    <td>delgadez leve</td>
+                    <td>17.0-18.49</td> 
+                    
+                </tr>
+                <tr>
+                    <td>normal</td>
+                    <td>18.5-24.99</td>
+                </tr>
+                <tr>
+                    <td>sobrepeso</td>
+                    <td>25.0-34-99</td> 
+                    
+                </tr>
+                <tr>
+                    <td>obesidad leve</td>
+                    <td>30.0-34.99</td>
+                </tr>
+                <tr>
+                    <td>obesidad media</td>
+                    <td>35.0-39-99</td> 
+                    
+                </tr>
+                <tr>
+                    <td>obesidad-morbida</td>
+                    <td>mas de 40</td>
+                </tr>
+               
+             
+                
+            </table>
+        </div>
+        <div *ngIf="result < 25 && result >18.5"> normal xd
+            <table style="width: 300%">
+                <tr>
+                    <th>estado del cuerpo</th>
+                    <th>puntos de imc segun la oms</th>
+                </tr>
+                <tr>
+                    <td>delgadez severa</td>
+                    <td>menos de 16</td> 
+                    
+                </tr>
+                <tr>
+                    <td>delgadez moderada</td>
+                    <td>16.0-24.99</td>
+                </tr>
+                <tr>
+                    <td>delgadez leve</td>
+                    <td>17.0-18.49</td> 
+                    
+                </tr>
+                <tr>
+                    <td>normal</td>
+                    <td>18.5-24.99</td>
+                </tr>
+                <tr>
+                    <td>sobrepeso</td>
+                    <td>25.0-34-99</td> 
+                    
+                </tr>
+                <tr>
+                    <td>obesidad leve</td>
+                    <td>30.0-34.99</td>
+                </tr>
+                <tr>
+                    <td>obesidad media</td>
+                    <td>35.0-39-99</td> 
+                    
+                </tr>
+                <tr>
+                    <td>obesidad-morbida</td>
+                    <td>mas de 40</td>
+                </tr>
+               
+             
+                
+            </table>
+        </div>
+        <div *ngIf="result < 30 && result >25.0"> sobrepeso
+            <table style="width: 300%">
+                <tr>
+                    <th>estado del cuerpo</th>
+                    <th>puntos de imc segun la oms</th>
+                </tr>
+                <tr>
+                    <td>delgadez severa</td>
+                    <td>menos de 16</td> 
+                    
+                </tr>
+                <tr>
+                    <td>delgadez moderada</td>
+                    <td>16.0-24.99</td>
+                </tr>
+                <tr>
+                    <td>delgadez leve</td>
+                    <td>17.0-18.49</td> 
+                    
+                </tr>
+                <tr>
+                    <td>normal</td>
+                    <td>18.5-24.99</td>
+                </tr>
+                <tr>
+                    <td>sobrepeso</td>
+                    <td>25.0-34.99</td> 
+                    
+                </tr>
+                <tr>
+                    <td>obesidad leve</td>
+                    <td>30.0-34.99</td>
+                </tr>
+                <tr>
+                    <td>obesidad media</td>
+                    <td>35.0-39-99</td> 
+                    
+                </tr>
+                <tr>
+                    <td>obesidad-morbida</td>
+                    <td>mas de 40</td>
+                </tr>
+               
+             
+                
+            </table>
+        </div>
+        <div *ngIf="result < 35 && result >30.0"> obesidad tipo 1
+            <table style="width: 300%">
+                <tr>
+                    <th>estado del cuerpo</th>
+                    <th>puntos de imc segun la oms</th>
+                </tr>
+                <tr>
+                    <td>delgadez severa</td>
+                    <td>menos de 16</td> 
+                    
+                </tr>
+                <tr>
+                    <td>delgadez moderada</td>
+                    <td>16.0-24.99</td>
+                </tr>
+                <tr>
+                    <td>delgadez leve</td>
+                    <td>17.0-18.49</td> 
+                    
+                </tr>
+                <tr>
+                    <td>normal</td>
+                    <td>18.5-24.99</td>
+                </tr>
+                <tr>
+                    <td>sobrepeso</td>
+                    <td>25.0-34-99</td> 
+                    
+                </tr>
+                <tr>
+                    <td>obesidad leve</td>
+                    <td>30.0-34.99</td>
+                </tr>
+                <tr>
+                    <td>obesidad media</td>
+                    <td>35.0-39.99</td> 
+                    
+                </tr>
+                <tr>
+                    <td>obesidad-morbida</td>
+                    <td>mas de 40</td>
+                </tr>
+               
+             
+                
+            </table>
+        </div>
+        <div *ngIf="result < 40 && result >35"> obesidad 2
+            <table style="width: 300%">
+                <tr>
+                    <th>estado del cuerpo</th>
+                    <th>puntos de imc segun la oms</th>
+                </tr>
+                <tr>
+                    <td>delgadez severa</td>
+                    <td>menos de 16</td> 
+                    
+                </tr>
+                <tr>
+                    <td>delgadez moderada</td>
+                    <td>16.0-24.99</td>
+                </tr>
+                <tr>
+                    <td>delgadez leve</td>
+                    <td>17.0-18.49</td> 
+                    
+                </tr>
+                <tr>
+                    <td>normal</td>
+                    <td>18.5-24.99</td>
+                </tr>
+                <tr>
+                    <td>sobrepeso</td>
+                    <td>25.0-34-99</td> 
+                    
+                </tr>
+                <tr>
+                    <td>obesidad leve</td>
+                    <td>30.0-34.99</td>
+                </tr>
+                <tr>
+                    <td>obesidad media</td>
+                    <td>35.0-39-99</td> 
+                    
+                </tr>
+                <tr>
+                    <td>obesidad-morbida</td>
+                    <td>mas de 40</td>
+                </tr>
+               
+             
+                
+            </table>
+        </div>
+
+        <div *ngIf="result >40.0"> obesidad morbida
+            <table style="width: 300%">
+                <tr>
+                    <th>estado del cuerpo</th>
+                    <th>puntos de imc segun la oms</th>
+                </tr>
+                <tr>
+                    <td>delgadez severa</td>
+                    <td>menos de 16</td> 
+                    
+                </tr>
+                <tr>
+                    <td>delgadez moderada</td>
+                    <td>16.0-24.99</td>
+                </tr>
+                <tr>
+                    <td>delgadez leve</td>
+                    <td>17.0-18.49</td> 
+                    
+                </tr>
+                <tr>
+                    <td>normal</td>
+                    <td>18.5-24.99</td>
+                </tr>
+                <tr>
+                    <td>sobrepeso</td>
+                    <td>25.0-34-99</td> 
+                    
+                </tr>
+                <tr>
+                    <td>obesidad leve</td>
+                    <td>30.0-34.99</td>
+                </tr>
+                <tr>
+                    <td>obesidad media</td>
+                    <td>35.0-39-99</td> 
+                    
+                </tr>
+                <tr>
+                    <td>obesidad-morbida</td>
+                    <td>mas de 40</td>
+                </tr>
+               
+             
+                
+            </table>
+        </div>
+        
+</div>
+
+
+    
